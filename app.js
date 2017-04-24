@@ -18,7 +18,7 @@ service.get('/api/*', (req, res) => {
   }).pipe(res);
 });
 service.get('/*', (req, res) => {
-  res.sendFile(config.service.uiDirectory);
+  res.sendFile(path(config.service.uiDirectory, 'index.html'));
 });
 
 service.listen(portSrv, () => {

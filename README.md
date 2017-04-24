@@ -17,7 +17,7 @@ npm install
 npm start
 ```
 
-Put absolute path to the main UI directory in apptest1be/config/configApp.json "uiDirectory" property.
+Put absolute path of the main UI directory in apptest1be/config/configApp.json "uiDirectory" property.
 
 Then you can open the app in your browser (localhost:4450)
 
