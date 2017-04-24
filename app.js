@@ -6,20 +6,21 @@ const urlResolve = require('url').resolve;
 const config = require('./config/configApp.json');
 
 const service = express();
-const portSrv = parseInt(process.env.PORT || config.service.port);
 
-service.use('/', express.static('../apptest1/dist'));
+const portSrv = parseInt((process.env.PORT || config.service.port), 10);
+
+service.use('/', express.static(config.service.uiDirectory));
 service.get('/api/*', (req, res) => {
-  let url = urlResolve('https://jsonplaceholder.typicode.com/', req.params[0]);
+  let url = urlResolve(config.service.apiUrl, req.params[0]);
   request({
     url,
     qs: req.query,
   }).pipe(res);
 });
 service.get('/*', (req, res) => {
-  res.sendFile('/work/elex/apptest1/dist/index.html');
+  res.sendFile(config.service.uiDirectory);
 });
 
-service.listen(parseInt(portSrv, 10), () => {
+service.listen(portSrv, () => {
   console.info(`Server listening on: http://localhost: ${portSrv}`)
 });

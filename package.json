@@ -1,9 +1,8 @@
 {
-  "name": "servicetest1",
-  "version": "0.0.0",
-  "description": "Service that returns user ",
-  "private": true,
-  "author": "Cisco",
+  "name": "serviceapptest1",
+  "version": "0.0.1",
+  "description": "Backend service for apptest1",
+  "author": "Yuriy Teslenko",
   "license": "",
   "scripts": {
     "start": "node app"

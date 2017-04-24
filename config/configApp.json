@@ -2,6 +2,8 @@
   "version": "0.0.1",
   "service": {
     "name": "Test1 Service",
-    "port": 4450
+    "port": 4450,
+    "apiUrl": "https://jsonplaceholder.typicode.com/",
+    "uiDirectory": "/work/apptest1/dist/index.html"
   }
 }
